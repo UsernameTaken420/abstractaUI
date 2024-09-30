@@ -14,7 +14,7 @@ export class CartPage {
     this.page = page;
     this.cartItem = page.locator("table > tbody > tr");
     this.removeButton = this.cartItem.locator("td:nth-child(4) > a");
-    this.checkoutButton = page.getByRole("button");
+    this.checkoutButton = page.getByRole("button", {name: "Place Order"});
     this.nameField = page.locator("#name");
     this.creditCardField = page.locator("#card");
     this.purchaseButton = page.getByRole("button", {name: "Purchase"});
